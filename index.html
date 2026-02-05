@@ -3,295 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name | AI Researcher & P.E.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Your Name | PhD Candidate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Academic Light Theme Variables */
             --bg-color: #ffffff;
-            --card-bg: #ffffff;
-            --text-main: #24292f;  /* GitHub Dark Grey */
-            --text-muted: #57606a; /* GitHub Muted Grey */
-            --accent: #0969da;     /* Academic/Link Blue */
-            --border: #d0d7de;     /* Light Border */
-            --badge-bg: #f6f8fa;   /* Light Grey Badge */
-            --badge-text: #24292f;
+            --text-main: #333333;
+            --text-light: #666666;
+            --link-color: #0066cc; /* Classic Academic Blue */
+            --link-hover: #004488;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Lato', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            font-size: 16px;
         }
 
-        /* --- Typography --- */
-        h1, h2, h3 {
-            font-weight: 600;
-            color: #1b1f24;
-            margin-top: 0;
-        }
-        
-        .mono {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--text-muted);
-            font-size: 0.85em;
-            background: #f6f8fa;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-
-        /* --- Header --- */
-        header {
-            background-color: #ffffff;
-            padding: 80px 20px 40px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            letter-spacing: -0.02em;
-        }
-
-        header .tagline {
-            font-size: 1.15em;
-            color: var(--text-muted);
-            max-width: 700px;
+        /* --- Main Container --- */
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            font-weight: 400;
+            padding: 60px 20px;
         }
 
-        header .badges {
-            margin-top: 25px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--badge-bg);
-            color: var(--badge-text);
-            padding: 6px 14px;
-            border-radius: 20px; /* Pill shape for academic look */
-            font-size: 0.9em;
-            font-weight: 500;
-            margin: 5px;
-            border: 1px solid var(--border);
-        }
-
-        /* --- Layout --- */
-        section {
-            max-width: 800px; /* Slightly narrower for reading focus */
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            font-size: 1.4em;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-
-        /* --- Projects (Clean Cards) --- */
-        .project-card {
-            background: var(--card-bg);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 6px;
-            border: 1px solid var(--border);
-            transition: box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border-color: var(--accent);
-        }
-
-        .project-header {
+        /* --- Header / Bio Section --- */
+        .header {
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+        }
+
+        /* Profile Image Style */
+        .profile-photo {
+            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Circle crop */
+            background-color: #f0f0f0; /* Placeholder grey */
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .bio-text h1 {
+            font-size: 2.2em;
+            margin-top: 0;
             margin-bottom: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .project-header h3 {
-            font-size: 1.1em;
-            margin-bottom: 5px;
+            font-weight: 700;
         }
 
-        .project-tech {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8em;
-            color: var(--text-muted);
-            background: #f3f3f3;
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-
-        .project-content ul {
-            padding-left: 20px;
+        .bio-text p {
+            margin-bottom: 15px;
             color: var(--text-main);
-            margin-top: 10px;
-        }
-        
-        .project-content li {
-            margin-bottom: 6px;
         }
 
-        /* --- Publications --- */
-        .pub-item {
+        .social-links a {
+            margin-right: 15px;
+            font-weight: 700;
+            font-size: 0.95em;
+            text-transform: uppercase;
+        }
+
+        /* --- Headings --- */
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #444;
+        }
+
+        /* --- Lists (Projects & Pubs) --- */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
             margin-bottom: 25px;
         }
-        .pub-title {
-            font-weight: 600;
+
+        .title {
+            font-weight: 700;
             font-size: 1.05em;
-            color: var(--text-main);
-        }
-        .pub-meta {
-            color: var(--text-muted);
-            font-size: 0.95em;
-            margin-top: 4px;
+            color: #222;
         }
 
-        /* --- Links & Footer --- */
+        .authors {
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+
+        .venue {
+            font-style: italic;
+            color: #444;
+        }
+
+        .project-desc {
+            font-size: 0.95em;
+            color: #444;
+            margin-top: 5px;
+        }
+
+        /* --- Links --- */
         a {
-            color: var(--accent);
+            color: var(--link-color);
             text-decoration: none;
-            font-weight: 500;
         }
         a:hover {
+            color: var(--link-hover);
             text-decoration: underline;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #f6f8fa;
-            color: var(--text-muted);
-            font-size: 0.9em;
-            border-top: 1px solid var(--border);
-            margin-top: 80px;
+        .tag {
+            font-family: monospace;
+            font-size: 0.85em;
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #555;
+            margin-left: 5px;
         }
 
-        .social-links {
-            margin-top: 10px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            color: var(--text-muted);
-        }
-        .social-links a:hover {
-            color: var(--accent);
+        /* --- Mobile Responsive --- */
+        @media (max-width: 700px) {
+            .header {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+            .social-links {
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Your Name</h1>
-    <p class="tagline">
-        AI Researcher & R&D Engineer (P.E.) bridging the gap between Engineering, Computing & AI.
-    </p>
-    <div class="badges">
-        <span class="badge">Generative Design</span>
-        <span class="badge">Scientific ML</span>
-        <span class="badge">Trustworthy AI</span>
-        <span class="badge">Applied Computer Vision</span>
-    </div>
-</header>
+<div class="container">
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a <strong>PhD Candidate in Robotics & AI</strong> and a licensed Professional Engineer (P.E.) with over 15 years of R&D experience. 
-        My research focuses on <strong>"AI for Physical Systems"</strong>—ensuring that deep learning models respect physical constraints (physics, geometry, safety) rather than hallucinating plausible but non-functional results.
-    </p>
-    <p>
-        Currently, I am working on Neuro-symbolic pipelines for CAD generation, Graph Neural Networks (GNNs) for simulation acceleration, and deploying robust vision models on the edge.
-    </p>
-</section>
-
-<section id="publications">
-    <h2>Selected Publications</h2>
-    <div class="pub-item">
-        <div class="pub-title">Review of Last Mile Urban Logistics: Policy & Safety</div>
-        <div class="pub-meta">
-            <em>Preprint</em> (Nov 2025) • Target Publication: Feb 2026<br>
-            <span class="mono">DOI: 10.xxxx/zenodo.xx42209</span>
+    <div class="header">
+        <div class="bio-text">
+            <h1>Your Name <span style="font-size: 0.6em; color: #777; font-weight: 400;">(P.E.)</span></h1>
+            <p>
+                PhD Candidate in Robotics & AI<br>
+                <strong>National University of Science and Technology (NUST)</strong>
+            </p>
+            <p>
+                I am an R&D Engineer and Researcher bridging the gap between <strong>Mechanical Engineering</strong> and <strong>Artificial Intelligence</strong>. My research focuses on "AI for Physical Systems"—developing Neuro-symbolic pipelines, GNN surrogates for FEA, and robust Edge AI perception models.
+            </p>
+            <div class="social-links">
+                <a href="mailto:your-email@example.com">Email</a>
+                <a href="https://github.com/myname">GitHub</a>
+                <a href="https://linkedin.com/in/myname">LinkedIn</a>
+                <a href="#">Google Scholar</a>
+                <a href="#">CV</a>
+            </div>
         </div>
-    </div>
-    <div class="pub-item">
-        <div class="pub-title">Digital Futures and Transformative Technologies</div>
-        <div class="pub-meta">
-            <em>Poster Presentation</em> @ IEEE ICODT2 (Dec 2025)
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Technical Projects</h2>
-
-    <div class="project-card">
-        <div class="project-header">
-            <h3>Prompt2CAD: Neuro-Symbolic Generative Design</h3>
-            <span class="project-tech">PyTorch • LLMs • SolidWorks API</span>
-        </div>
-        <div class="project-content">
-            <p>A pipeline addressing the "hallucination" problem in generative design by grounding LLM outputs in executable CAD operations.</p>
-            <ul>
-                <li>Designed a 'Prompt-to-API' translator converting natural language into parametric SolidWorks macros.</li>
-                <li>Implemented constraint checking to ensure 100% geometric validity of generated parts.</li>
-                <li><strong>Result:</strong> Automated generation of editable 3D assets from text descriptions.</li>
-            </ul>
-            <span class="mono">Code: <a href="https://github.com/myname/Text2CAD">github.com/myname/Text2CAD</a></span>
-        </div>
+        <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
     </div>
 
-    <div class="project-card">
-        <div class="project-header">
-            <h3>Local LLM Inference & Optimization</h3>
-            <span class="project-tech">llama.cpp • TensorRT-LLM • WSL</span>
-        </div>
-        <div class="project-content">
-            <p>Conducted rigorous benchmarking of Large Language Models on consumer-grade hardware to assess feasibility for edge deployment.</p>
-            <ul>
-                <li>Evaluated inference latency across vLLM, Ollama, and LMStudio on NVIDIA RTX 40-series.</li>
-                <li>Identified 8B parameter models as the optimal trade-off point for local engineering assistants.</li>
-            </ul>
-            <span class="mono">Benchmarks: <a href="https://github.com/myname/Local-LLMs-Benchmarks">View Results</a></span>
-        </div>
+    <section>
+        <h2>News</h2>
+        <ul>
+            <li>
+                <strong>[Dec 2025]</strong> Presented poster on <em>Digital Futures</em> at IEEE ICODT2.
+            </li>
+            <li>
+                <strong>[Nov 2025]</strong> Released preprint: <em>Review of Last Mile Urban Logistics</em>.
+            </li>
+            <li>
+                <strong>[Jan 2025]</strong> Started PhD in AI & Robotics at NUST.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Publications</h2>
+        <ul>
+            <li>
+                <span class="title">Review of Last Mile Urban Logistics: Policy & Safety</span>
+                <br>
+                <span class="authors"><strong>Your Name</strong>, Co-Author Name, Advisor Name</span>
+                <br>
+                <span class="venue">Preprint, 2025 (Under Review)</span>
+                <br>
+                <a href="#">[PDF]</a> <a href="#">[DOI]</a>
+            </li>
+            <li>
+                <span class="title">Digital Futures and Transformative Technologies</span>
+                <br>
+                <span class="authors"><strong>Your Name</strong></span>
+                <br>
+                <span class="venue">IEEE ICODT2, Dec 2025 (Poster Presentation)</span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Selected Projects</h2>
+        <ul>
+            <li>
+                <span class="title">Prompt2CAD: Neuro-Symbolic Generative Design</span>
+                <a href="https://github.com/myname/Text2CAD">[Code]</a>
+                <a href="#">[Demo]</a>
+                <div class="project-desc">
+                    A pipeline addressing the "hallucination" problem in generative design. It translates natural language prompts into executable <strong>SolidWorks API macros</strong>, ensuring 100% geometric validity for 3D assets.
+                </div>
+            </li>
+
+            <li>
+                <span class="title">Local LLM Inference Benchmarks</span>
+                <a href="https://github.com/myname/Local-LLMs-Benchmarks">[Code]</a>
+                <a href="#">[Data]</a>
+                <div class="project-desc">
+                    Rigorous benchmarking of Llama 3, Qwen, and Mistral models on consumer hardware (RTX 40-series). Evaluated <strong>vLLM, Ollama, and TensorRT-LLM</strong> to identify optimal setups for local engineering assistants.
+                </div>
+            </li>
+
+            <li>
+                <span class="title">Edge AI: Model Compression for Agriculture</span>
+                <a href="https://github.com/myname/suq3framework-RNN-model-compression">[Code]</a>
+                <div class="project-desc">
+                    Implemented a 3-stage compression pipeline (Pruning, Quantization, TFLite) for RNN-based precision agriculture models, enabling real-time inference on legacy Android devices.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div style="margin-top: 80px; font-size: 0.9em; color: #888;">
+        &copy; 2026 Your Name. 
     </div>
 
-    <div class="project-card">
-        <div class="project-header">
-            <h3>Edge AI: Model Compression for Agriculture</h3>
-            <span class="project-tech">TFLite • Quantization • Android</span>
-        </div>
-        <div class="project-content">
-            <p>Optimizing deep learning models for deployment on resource-constrained mobile devices in agricultural settings.</p>
-            <ul>
-                <li>Implemented a 3-stage compression pipeline (Pruning, Quantization, Format Conversion) for RNN-based precision agriculture models.</li>
-                <li>Ported Object Detection architectures to Android for real-time inference in the field.</li>
-            </ul>
-            <span class="mono">Framework: <a href="https://github.com/myname/suq3framework-RNN-model-compression">SUQ3 Project</a></span>
-        </div>
-    </div>
-
-</section>
-
-<footer>
-    <div class="social-links">
-        <a href="https://github.com/myname">GitHub</a> /
-        <a href="https://linkedin.com/in/myname">LinkedIn</a> /
-        <a href="mailto:your-email@example.com">Email</a>
-    </div>
-    <br>
-    &copy; 2026 Your Name. Built for Research.
-</footer>
+</div>
 
 </body>
 </html>
