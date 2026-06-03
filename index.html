@@ -3,141 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atif Abid | PhD Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>My Name | PhD Researcher & Faculty</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-main: #333333;
-            --text-light: #666666;
-            --link-color: #0066cc; /* Classic Academic Blue */
-            --link-hover: #004488;
+            --bg: #fafaf8;
+            --surface: #ffffff;
+            --text: #1a1a18;
+            --muted: #5a5a54;
+            --faint: #9a9a92;
+            --rule: #e4e4dc;
+            --accent: #1a4a2e;
+            --accent-light: #e8f2ec;
+            --accent-mid: #4a8c64;
+            --link: #1a4a2e;
+            --link-hover: #0d2e1c;
+            --tag-bg: #f0f0e8;
+            --tag-text: #3a3a34;
         }
+
+        *, *::before, *::after { box-sizing: border-box; }
 
         body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-            font-size: 16px;
+            line-height: 1.7;
+            font-size: 15.5px;
         }
 
-        /* --- Main Container --- */
+        /* thin top bar accent */
+        body::before {
+            content: '';
+            display: block;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-mid) 100%);
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 56px 28px 80px;
         }
 
-        /* --- Header / Bio Section --- */
+        /* ── HEADER ── */
         .header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 48px;
+            margin-bottom: 56px;
+            align-items: start;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 4px;
+            object-fit: cover;
+            filter: grayscale(15%);
+            border: 1px solid var(--rule);
+            flex-shrink: 0;
+        }
+
+        .name-row {
             display: flex;
-            gap: 40px;
-            margin-bottom: 60px;
-            align-items: flex-start;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
         }
 
-        .bio-text h1 {
-            font-size: 2.2em;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-weight: 700;
+        h1 {
+            font-family: 'IBM Plex Serif', serif;
+            font-size: 2em;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.01em;
+            color: var(--text);
         }
 
-        .bio-text p {
-            margin-bottom: 15px;
-            color: var(--text-main);
+        .pe-badge {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7em;
+            color: var(--faint);
+            font-weight: 400;
+            border: 1px solid var(--rule);
+            padding: 1px 6px;
+            border-radius: 3px;
+            letter-spacing: 0.04em;
+        }
+
+        .tagline {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.78em;
+            color: var(--accent);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+            font-weight: 500;
+        }
+
+        .affil {
+            font-size: 0.92em;
+            color: var(--muted);
+            margin: 0 0 6px;
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .role-pill {
+            font-size: 0.78em;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 2px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .interests {
+            font-size: 0.88em;
+            color: var(--muted);
+            margin: 0 0 16px;
+            line-height: 1.9;
+        }
+
+        .interests strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .interests .dot {
+            color: var(--rule);
+            margin: 0 4px;
+        }
+
+        .bio p {
+            margin: 0 0 12px;
+            font-size: 0.96em;
+            color: #2a2a24;
+        }
+
+        .bio p:last-child { margin-bottom: 20px; }
+
+        .bio strong { font-weight: 600; color: var(--text); }
+
+        .bio em { font-style: italic; color: var(--muted); }
+
+        .teaching-note {
+            font-size: 0.88em;
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent-mid);
+            padding: 10px 14px;
+            border-radius: 0 3px 3px 0;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        /* ── SOCIAL LINKS ── */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
         }
 
         .social-links a {
-            margin-right: 15px;
-            font-weight: 700;
-            font-size: 0.95em;
-            text-transform: uppercase;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75em;
+            color: var(--muted);
+            text-decoration: none;
+            border: 1px solid var(--rule);
+            padding: 3px 10px;
+            border-radius: 2px;
+            letter-spacing: 0.04em;
+            transition: border-color 0.15s, color 0.15s;
         }
 
-        /* --- Headings --- */
+        .social-links a:hover {
+            color: var(--link-hover);
+            border-color: var(--accent-mid);
+        }
+
+        /* ── SECTION HEADINGS ── */
         h2 {
-            font-size: 1.5em;
-            border-bottom: 1px solid #eeeeee;
-            padding-bottom: 10px;
-            margin-top: 50px;
-            margin-bottom: 20px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72em;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #444;
+            color: var(--faint);
+            margin: 52px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--rule);
+            font-weight: 500;
         }
 
-        /* --- Lists (Projects & Pubs) --- */
-        ul {
-            list-style-type: none;
+        /* ── NEWS ── */
+        .news-list {
+            list-style: none;
             padding: 0;
+            margin: 0;
         }
 
-        li {
-            margin-bottom: 25px;
+        .news-list li {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--rule);
+            font-size: 0.93em;
+            align-items: baseline;
         }
 
-        .title {
-            font-weight: 700;
-            font-size: 1.05em;
-            color: #222;
+        .news-list li:last-child { border-bottom: none; }
+
+        .news-date {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85em;
+            color: var(--faint);
+            white-space: nowrap;
         }
 
-        .authors {
-            color: var(--text-light);
-            font-size: 0.95em;
+        /* ── PUBLICATIONS ── */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .venue {
+        .pub-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .pub-list li:last-child { border-bottom: none; }
+
+        .pub-title {
+            font-family: 'IBM Plex Serif', serif;
+            font-weight: 600;
+            font-size: 1.0em;
+            color: var(--text);
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .pub-authors {
+            font-size: 0.88em;
+            color: var(--muted);
+        }
+
+        .pub-venue {
+            font-size: 0.85em;
             font-style: italic;
-            color: #444;
+            color: var(--faint);
+        }
+
+        .pub-links {
+            margin-top: 5px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .pub-links a {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.78em;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .pub-links a:hover { text-decoration: underline; }
+
+        .status-badge {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72em;
+            padding: 2px 7px;
+            border-radius: 2px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .status-review { background: #fef3e2; color: #92600a; }
+        .status-prep   { background: #eef2ff; color: #3730a3; }
+        .status-poster { background: var(--accent-light); color: var(--accent); }
+
+        /* ── PROJECTS ── */
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .project-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .project-list li:last-child { border-bottom: none; }
+
+        .project-header {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 0.98em;
+            color: var(--text);
+        }
+
+        .project-links a {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.78em;
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 8px;
+        }
+
+        .project-links a:hover { text-decoration: underline; }
+
+        .tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.72em;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 2px 7px;
+            border-radius: 2px;
+            letter-spacing: 0.02em;
         }
 
         .project-desc {
-            font-size: 0.95em;
-            color: #444;
+            font-size: 0.9em;
+            color: var(--muted);
             margin-top: 5px;
+            line-height: 1.6;
         }
 
-        /* --- Links --- */
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-        a:hover {
-            color: var(--link-hover);
-            text-decoration: underline;
-        }
-
-        .tag {
-            font-family: monospace;
-            font-size: 0.85em;
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: #555;
-            margin-left: 5px;
+        /* ── FOOTER ── */
+        .footer {
+            margin-top: 72px;
+            padding-top: 20px;
+            border-top: 1px solid var(--rule);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75em;
+            color: var(--faint);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        /* --- Mobile Responsive --- */
-        @media (max-width: 700px) {
+        /* ── LINKS ── */
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; color: var(--link-hover); }
+
+        /* ── MOBILE ── */
+        @media (max-width: 640px) {
             .header {
-                flex-direction: column-reverse;
-                align-items: center;
-                text-align: center;
+                grid-template-columns: 1fr;
+                gap: 24px;
             }
             .profile-photo {
-                width: 150px;
-                height: 150px;
-                margin-bottom: 20px;
+                width: 110px;
+                height: 110px;
+                order: -1;
             }
-            .social-links {
-                justify-content: center;
-                display: flex;
-                flex-wrap: wrap;
+            .news-list li {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+            .footer {
+                flex-direction: column;
             }
         }
     </style>
@@ -146,140 +391,208 @@
 
 <div class="container">
 
+    <!-- HEADER -->
     <div class="header">
         <div class="bio-text">
-            <h1>Atif Abid <span style="font-size: 0.6em; color: #777; font-weight: 400;">(P.E.)</span></h1>
-            <p>
-                <strong>AI for Physical Systems</strong> · PhD Candidate in Robotics & AI<br>
-                <strong>National University of Science and Technology (NUST)</strong>
+            <div class="name-row">
+                <h1>My Name</h1>
+                <span class="pe-badge">P.E.</span>
+            </div>
+
+            <p class="tagline">AI for Physical Systems</p>
+
+            <p class="affil">
+                PhD Candidate · Dept. of Robotics & AI, <strong>NUST</strong><br>
+                Visiting Faculty · Dept. of Mechatronics Engineering, College of EME, <strong>NUST</strong>
             </p>
 
-            <p style="color: #555; font-size: 0.95em; margin-top: -10px; margin-bottom: 20px;">
-                <strong>Research Interests:</strong> Edge AI & IoT • Precision Agriculture • Computer Vision & Robotic Perception • Scientific ML (PINNs & GNNs) • Generative Design
+            <div class="roles">
+                <span class="role-pill">R&amp;D Engineer</span>
+                <span class="role-pill">Researcher</span>
+                <span class="role-pill">Educator</span>
+            </div>
+
+            <p class="interests">
+                <strong>Research:</strong>
+                Edge AI &amp; IoT
+                <span class="dot">•</span>
+                Precision Agriculture
+                <span class="dot">•</span>
+                Computer Vision &amp; Robotic Perception
+                <span class="dot">•</span>
+                Scientific ML (PINNs &amp; GNNs)
+                <span class="dot">•</span>
+                Generative Design
             </p>
 
-            <p>
-                I build AI that respects physics. My work spans <strong>neuro-symbolic pipelines</strong> (Text2CAD), <strong>GNN surrogates for FEA</strong>, and <strong>Edge AI perception models</strong> designed for deployment on constrained hardware.
-            </p>
+            <div class="bio">
+                <p>
+                    I build AI that respects physics. My work spans <strong>neuro-symbolic pipelines</strong> (Text2CAD), <strong>GNN surrogates for FEA</strong>, and <strong>Edge AI perception models</strong> designed for deployment on constrained hardware—where accuracy and real-world deployability must coexist.
+                </p>
+                <p>
+                    My PhD at NUST focuses on <strong>Edge AI and IoT for Precision Agriculture</strong>, developing object detection systems that run reliably on resource-limited field devices.
+                </p>
+            </div>
 
-            <p>
-                My PhD research at NUST focuses on <strong>Edge AI and IoT for Precision Agriculture</strong>—designing systems that are accurate <em>and</em> deployable in real-world, resource-limited environments.
-            </p>
-            </p>
+            <div class="teaching-note">
+                🌱 Recently wrapped my first undergraduate course — <strong>Fundamentals of Programming (C++)</strong> — where students built autonomous line-following robots as their final project. The project videos got a lot of appreciation. Designing for constrained hardware starts in the classroom.
+            </div>
+
             <div class="social-links">
-                <a href="mailto:a.sohail@ceme.nust.edu.pk">Email</a>
-                <a href="https://github.com/atifabid">GitHub</a>
-                <a href="https://linkedin.com/in/atifsohail">LinkedIn</a>
-                <a href="https://scholar.google.com/citations?user=OqfRPNgAAAAJ&hl=en">Google Scholar</a>
+                <a href="mailto:a.name2@ceme.nust.edu.pk">Email</a>
+                <a href="https://github.com/myname" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/myname" target="_blank">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=OqfRPNgAAAAJ&hl=en" target="_blank">Scholar</a>
                 <a href="#">CV</a>
             </div>
-        </div> <img src="profile.jpg" alt="Profile Photo" class="profile-photo"> </div>
+        </div>
 
+        <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+    </div>
+
+    <!-- NEWS -->
     <section>
         <h2>News</h2>
-        <ul>
-    <li>
-        <strong>[Dec 2025]</strong> Started position as <a href="https://ceme.nust.edu.pk/faculty/atif-sohail-3/" target="_blank">Research Visiting Faculty</a> at 
-        Dept of Mechatronics Engineering, College of EME, NUST.
-    </li>
-    <li>
-    <strong>[Dec 2025]</strong> Presented poster on <em>AI and IoT in Precision Agriculture</em> at IEEE ICODT2 (SINES, NUST). 
-</li>
-    <li>
-        <strong>[Nov 2025]</strong> Released preprint: <em>Review of Last Mile Urban Logistics</em> at zenodo.org.
-    </li>
-    <li>
-        <strong>[Jan 2025]</strong> Started PhD in AI & Robotics at <a href="https://smme.nust.edu.pk/" target="_blank">NUST</a>.
-    </li>
-</ul>
-    </section>
-
-    <section>
-        <h2>Publications and Preprints</h2>
-        <ul>
+        <ul class="news-list">
             <li>
-            <span class="title">Low Cost Edge-Based Person Detection for IoT Surveillance Systems</span>
-            <br>
-            <span class="authors"><strong>Atif Abid</strong>, Dr Danish Hussain</span>
-            <br>
-            <span class="venue">Submitted to IEEE Conference, 2026 (Under Review)</span>
-        </li>
-            <li>
-            <span class="title">Deep Learning for Wheat Disease Detection: A Comprehensive Review</span>
-            <br>
-            <span class="authors"><strong>Atif Abid</strong></span>
-            <br>
-            <span class="venue">In Preparation (2026)</span>
-        </li>
-            <li>
-                <span class="title">Review of Last Mile Urban Logistics: Policy & Safety</span>
-                <br>
-                <span class="authors"><strong>Atif Abid</strong></span>
-                <br>
-                <span class="venue">Preprint, 2025 (Under Review)</span>
-                <br>
-                <a href="#">[PDF]</a> <a href="https://zenodo.org/records/17842209" target="_blank">[DOI]</a>
+                <span class="news-date">Dec 2025</span>
+                <span>Started as <a href="https://ceme.nust.edu.pk/faculty/myname/" target="_blank">Research Visiting Faculty</a>, Dept. of Mechatronics Engineering, College of EME, NUST.</span>
             </li>
             <li>
-                <span class="title">Review of High Impact Works: Employing AI and UAVs for
-development of Precision Agri Solutions</span>
-                <br>
-                <span class="authors"><strong>Atif Abid</strong>, Dr K. Faraz, Dr Shahbaz K.</span>
-                <br>
-                <span class="venue">IEEE ICODT2, Dec 2025 (Poster Presentation)</span> <a href="Poster_ICoDT2.pdf" target="_blank" rel="noopener noreferrer">[View Poster PDF]</a>
+                <span class="news-date">Dec 2025</span>
+                <span>Presented poster on <em>AI and IoT in Precision Agriculture</em> at IEEE ICODT2 (SINES, NUST).</span>
+            </li>
+            <li>
+                <span class="news-date">Nov 2025</span>
+                <span>Released preprint: <em>Review of Last Mile Urban Logistics</em> on Zenodo.</span>
+            </li>
+            <li>
+                <span class="news-date">Jan 2025</span>
+                <span>Started PhD in AI &amp; Robotics at <a href="https://smme.nust.edu.pk/" target="_blank">NUST</a>.</span>
             </li>
         </ul>
     </section>
 
+    <!-- PUBLICATIONS -->
+    <section>
+        <h2>Publications &amp; Preprints</h2>
+        <ul class="pub-list">
+            <li>
+                <span class="pub-title">
+                    Low Cost Edge-Based Person Detection for IoT Surveillance Systems
+                    <span class="status-badge status-review">Under Review</span>
+                </span>
+                <div class="pub-authors"><strong>My Name</strong>, Dr Danish Hussain</div>
+                <div class="pub-venue">Submitted to IEEE Conference, 2026</div>
+            </li>
+            <li>
+                <span class="pub-title">
+                    Deep Learning for Wheat Disease Detection: A Comprehensive Review
+                    <span class="status-badge status-prep">In Preparation</span>
+                </span>
+                <div class="pub-authors"><strong>My Name</strong></div>
+                <div class="pub-venue">2026</div>
+            </li>
+            <li>
+                <span class="pub-title">Review of Last Mile Urban Logistics: Policy &amp; Safety</span>
+                <div class="pub-authors"><strong>My Name</strong></div>
+                <div class="pub-venue">Preprint, 2025 · Under Review</div>
+                <div class="pub-links">
+                    <a href="#">[PDF]</a>
+                    <a href="https://zenodo.org/records/17842209" target="_blank">[DOI / Zenodo]</a>
+                </div>
+            </li>
+            <li>
+                <span class="pub-title">
+                    Review of High-Impact Works: AI &amp; UAVs for Precision Agriculture
+                    <span class="status-badge status-poster">Poster</span>
+                </span>
+                <div class="pub-authors"><strong>My Name</strong>, Dr K. Faraz, Dr Shahbaz K.</div>
+                <div class="pub-venue">IEEE ICODT2, Dec 2025</div>
+                <div class="pub-links">
+                    <a href="Poster_ICoDT2.pdf" target="_blank">[View Poster PDF]</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS -->
     <section>
         <h2>Selected Projects</h2>
-        <ul>
+        <ul class="project-list">
             <li>
-                <span class="title">Prompt2CAD: Neuro-Symbolic Generative Design</span>
-                <a href="https://github.com/atifabid/Prompt2CAD-LLM-builds-in-solidworks">[Code]</a>
-                <a href="#">[Demo]</a>
+                <div class="project-header">
+                    <span class="project-title">Prompt2CAD — Neuro-Symbolic Generative Design</span>
+                    <span class="project-links">
+                        <a href="https://github.com/myname/Prompt2CAD-LLM-builds-in-solidworks">[Code]</a>
+                        <a href="#">[Demo]</a>
+                    </span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">CAD</span>
+                </div>
                 <div class="project-desc">
-                    A text-to-CAD generative design system. It translates natural language prompts into executable <strong>SolidWorks geometric feature tree</strong>, ensuring 100% geometric validity for 3D CAD generation.
+                    Text-to-CAD pipeline that translates natural language into executable <strong>SolidWorks geometric feature trees</strong>, guaranteeing 100% geometric validity. Bridges LLM reasoning with physical design constraints.
                 </div>
             </li>
             <li>
-            <span class="title">Reproducibility Study: SCS-YOLO for Precision Agriculture</span>
-            <a href="#">[Code]</a>
-            <span class="tag">Computer Vision</span> <span class="tag">PyTorch</span>
-            <div class="project-desc">
-                Re-implemented the <strong>SCS-YOLO</strong> architecture (originally published in <em>Computers and Electronics in Agriculture</em>) using Google Colab. Validated the model on open-source pest/crop datasets, achieving mAP results comparable to the original authors' baseline.
-            </div>
-        </li>
-            <li>
-            <span class="title">Edge-Based Person Detection System</span>
-            <a href="#">[Demo]</a>
-            <span class="tag">IoT</span> <span class="tag">Edge AI</span>
-            <div class="project-desc">
-                Developed a real-time surveillance node for constrained IoT hardware. Optimized lightweight detection models to run on edge devices for person and object detection in agricultural settings. (Paper under submission).
-            </div>
-        </li>
-
-            <li>
-                <span class="title">Local LLM Inference Benchmarks</span>
-                <a href="https://github.com/atifabid/Local-LLMs-Benchmarks">[Code]</a>
-                <a href="https://github.com/atifabid/Local-LLMs-Benchmarks/blob/main/benchmark_report.md">[Data]</a>
+                <div class="project-header">
+                    <span class="project-title">Edge-Based Person Detection System</span>
+                    <span class="project-links">
+                        <a href="#">[Demo]</a>
+                    </span>
+                    <span class="tag">IoT</span>
+                    <span class="tag">Edge AI</span>
+                </div>
                 <div class="project-desc">
-                    Rigorous benchmarking of Llama 3, Qwen, and gptoss20B models on consumer hardware (RTX 40-series). Evaluated <strong>vLLM, Ollama, and TensorRT-LLM</strong> to identify optimal setups for local engineering assistants.
+                    Real-time surveillance node for constrained IoT hardware. Optimized lightweight detection models for person and object detection in agricultural settings. Paper under submission.
                 </div>
             </li>
-
             <li>
-                <span class="title">Edge AI: Model Compression for Agriculture</span>
-                <a href="https://github.com/atifabid/suq3framework-RNN-model-compression">[Code]</a>
+                <div class="project-header">
+                    <span class="project-title">Reproducibility Study: SCS-YOLO for Precision Agriculture</span>
+                    <span class="project-links">
+                        <a href="#">[Code]</a>
+                    </span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">PyTorch</span>
+                </div>
                 <div class="project-desc">
-                    Implemented a 3-stage compression pipeline (Pruning, Quantization, TFLite) for RNN-based precision agriculture models, enabling real-time inference on legacy Android devices.
+                    Re-implemented the SCS-YOLO architecture (originally in <em>Computers and Electronics in Agriculture</em>) on Google Colab. Validated on open-source pest/crop datasets, achieving mAP results consistent with the original authors.
+                </div>
+            </li>
+            <li>
+                <div class="project-header">
+                    <span class="project-title">Local LLM Inference Benchmarks</span>
+                    <span class="project-links">
+                        <a href="https://github.com/myname/Local-LLMs-Benchmarks">[Code]</a>
+                        <a href="https://github.com/myname/Local-LLMs-Benchmarks/blob/main/benchmark_report.md">[Data]</a>
+                    </span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">Benchmarking</span>
+                </div>
+                <div class="project-desc">
+                    Rigorous benchmarking of Llama 3, Qwen, and gptoss20B on consumer hardware (RTX 40-series). Evaluated vLLM, Ollama, and TensorRT-LLM to identify optimal local inference setups.
+                </div>
+            </li>
+            <li>
+                <div class="project-header">
+                    <span class="project-title">Edge AI: Model Compression for Agriculture</span>
+                    <span class="project-links">
+                        <a href="https://github.com/myname/suq3framework-RNN-model-compression">[Code]</a>
+                    </span>
+                    <span class="tag">TFLite</span>
+                    <span class="tag">Compression</span>
+                </div>
+                <div class="project-desc">
+                    3-stage compression pipeline (Pruning → Quantization → TFLite export) for RNN-based precision agriculture models, enabling real-time inference on legacy Android devices.
                 </div>
             </li>
         </ul>
     </section>
 
-    <div style="margin-top: 80px; font-size: 0.9em; color: #888;">
-        &copy; 2026 Atif Abid. 
+    <div class="footer">
+        <span>&copy; 2026 My Name</span>
+        <span>Last updated: June 2026</span>
     </div>
 
 </div>
