@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atif Abid | PhD Researcher & Faculty</title>
+    <title>Atif Abid | PhD Researcher Robotics & AI</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -409,16 +409,16 @@
             <div class="roles">
                 <span class="role-pill">R&amp;D Engineer</span>
                 <span class="role-pill">Researcher</span>
-                <span class="role-pill">Educator</span>
+                <span class="role-pill">Robotics</span>
             </div>
 
             <p class="interests">
                 <strong>Research:</strong>
-                Edge AI &amp; IoT
+                Legged Robot Locomotion &amp; Sim-to-Real
                 <span class="dot">•</span>
-                Precision Agriculture
+                Reinforcement Learning for Control
                 <span class="dot">•</span>
-                Computer Vision &amp; Robotic Perception
+                Robotic Perception &amp; Edge AI
                 <span class="dot">•</span>
                 Scientific ML (PINNs &amp; GNNs)
                 <span class="dot">•</span>
@@ -427,10 +427,10 @@
 
             <div class="bio">
                 <p>
-                    I build AI that respects physics. My work spans <strong>neuro-symbolic pipelines</strong> (Text2CAD), <strong>GNN surrogates for FEA</strong>, and <strong>Edge AI perception models</strong> designed for deployment on constrained hardware—where accuracy and real-world deployability must coexist.
+                    I build AI that respects physics — and increasingly, AI that has to act in it. My current work is on <strong>legged robot locomotion</strong>: sim-to-real transfer for quadrupeds, combining classical model-based gait control with learned residual policies, and grounding controllers in a robot's own kinematic structure rather than borrowed assumptions.
                 </p>
                 <p>
-                    My PhD at NUST focuses on <strong>Edge AI and IoT for Precision Agriculture</strong>, developing object detection systems that run reliably on resource-limited field devices.
+                    This sits alongside earlier work in <strong>GNN surrogates for physical simulation</strong> (FEA/PINNs), <strong>robotic perception</strong>, and <strong>Edge AI</strong> deployment on constrained hardware — a common thread of making learned models reliable under real physical and computational constraints, not just in simulation.
                 </p>
             </div>
 
@@ -454,6 +454,10 @@
     <section>
         <h2>News</h2>
         <ul class="news-list">
+            <li>
+                <span class="news-date">2026</span>
+                <span>Ongoing: <em>Spot-Sumo</em> — sim-to-real quadruped locomotion project (SpotMicro), combining corrected IK, Bezier gait control, and learned gait correction. Hardware build in progress.</span>
+            </li>
             <li>
                 <span class="news-date">Dec 2025</span>
                 <span>Started as <a href="https://ceme.nust.edu.pk/faculty/atif-sohail-3/" target="_blank">Research Visiting Faculty</a>, Dept. of Mechatronics Engineering, College of EME, NUST.</span>
@@ -486,14 +490,6 @@
                 <div class="pub-venue">Submitted to IEEE Conference, 2026</div>
             </li>
             <li>
-                <span class="pub-title">
-                    Deep Learning for Wheat Disease Detection: A Comprehensive Review
-                    <span class="status-badge status-prep">In Preparation</span>
-                </span>
-                <div class="pub-authors"><strong>Atif Abid</strong></div>
-                <div class="pub-venue">2026</div>
-            </li>
-            <li>
                 <span class="pub-title">Review of Last Mile Urban Logistics: Policy &amp; Safety</span>
                 <div class="pub-authors"><strong>Atif Abid</strong></div>
                 <div class="pub-venue">Preprint, 2025 · Under Review</div>
@@ -501,6 +497,14 @@
                     <a href="#">[PDF]</a>
                     <a href="https://zenodo.org/records/17842209" target="_blank">[DOI / Zenodo]</a>
                 </div>
+            </li>
+            <li>
+                <span class="pub-title">
+                    Deep Learning for Wheat Disease Detection: A Comprehensive Review
+                    <span class="status-badge status-prep">In Preparation</span>
+                </span>
+                <div class="pub-authors"><strong>Atif Abid</strong></div>
+                <div class="pub-venue">2026</div>
             </li>
             <li>
                 <span class="pub-title">
@@ -522,6 +526,21 @@
         <ul class="project-list">
             <li>
                 <div class="project-header">
+                    <span class="project-title">Spot-Sumo — Sim-to-Real Quadruped Locomotion</span>
+                    <span class="project-links">
+                        <a href="#">[Repo]</a>
+                        <a href="#">[Notes]</a>
+                    </span>
+                    <span class="tag">Robotics</span>
+                    <span class="tag">RL</span>
+                    <span class="tag">Sim-to-Real</span>
+                </div>
+                <div class="project-desc">
+                    Locomotion pipeline for the SpotMicro quadruped: URDF-grounded inverse kinematics, Bezier-curve gait generation, and a learned residual policy for gait correction. Validated in PyBullet and MuJoCo; physical hardware build in progress.
+                </div>
+            </li>
+            <li>
+                <div class="project-header">
                     <span class="project-title">Prompt2CAD — Neuro-Symbolic Generative Design</span>
                     <span class="project-links">
                         <a href="https://github.com/atifabid/Prompt2CAD-LLM-builds-in-solidworks">[Code]</a>
@@ -540,11 +559,11 @@
                     <span class="project-links">
                         <a href="#">[Demo]</a>
                     </span>
-                    <span class="tag">IoT</span>
+                    <span class="tag">Robotics × Agri</span>
                     <span class="tag">Edge AI</span>
                 </div>
                 <div class="project-desc">
-                    Real-time surveillance node for constrained IoT hardware. Optimized lightweight detection models for person and object detection in agricultural settings. Paper under submission.
+                    Real-time perception node for constrained IoT/robotic hardware. Lightweight detection models for person and object detection, deployed in agricultural field settings. Paper under submission.
                 </div>
             </li>
             <li>
@@ -553,7 +572,7 @@
                     <span class="project-links">
                         <a href="#">[Code]</a>
                     </span>
-                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Robotics × Agri</span>
                     <span class="tag">PyTorch</span>
                 </div>
                 <div class="project-desc">
