@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atif Sohail Abid | PhD Researcher Robotics & AI</title>
+    <title>Atif Sohail Abid | Embodied AI Researcher & P.E.</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ── UPGRADED TECHNICAL THEME ── */
         :root {
-            --bg: #f8fafc; /* Crisp, tech-lab white/slate */
+            --bg: #f8fafc; 
             --surface: #ffffff;
-            --text: #0f172a; /* Slate 900 for high contrast */
-            --muted: #475569; /* Slate 600 */
-            --faint: #94a3b8; /* Slate 400 */
-            --rule: #cbd5e1; /* Slate 300 for sharp borders */
-            --accent: #2563eb; /* Industrial Tech Blue */
+            --text: #0f172a; 
+            --muted: #475569; 
+            --faint: #94a3b8; 
+            --rule: #cbd5e1; 
+            --accent: #2563eb; 
             --accent-light: #eff6ff;
             --accent-mid: #3b82f6;
             --link: #2563eb;
@@ -35,7 +34,6 @@
             font-size: 15.5px;
         }
 
-        /* Solid technical top bar */
         body::before {
             content: '';
             display: block;
@@ -44,23 +42,22 @@
         }
 
         .container {
-            max-width: 860px;
+            max-width: 1024px;
             margin: 0 auto;
-            padding: 56px 28px 80px;
+            padding: 56px 40px 80px;
         }
 
-        /* ── HEADER ── */
         .header {
             display: grid;
             grid-template-columns: 1fr auto;
-            gap: 48px;
+            gap: 56px;
             margin-bottom: 56px;
             align-items: start;
         }
 
         .profile-photo {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
             border-radius: 4px;
             object-fit: cover;
             filter: grayscale(20%) contrast(110%);
@@ -78,7 +75,7 @@
 
         h1 {
             font-family: 'IBM Plex Serif', serif;
-            font-size: 2.2em;
+            font-size: 2.4em;
             font-weight: 600;
             margin: 0;
             letter-spacing: -0.02em;
@@ -107,7 +104,7 @@
         }
 
         .affil {
-            font-size: 0.92em;
+            font-size: 0.95em;
             color: var(--muted);
             margin: 0 0 6px;
         }
@@ -130,7 +127,7 @@
         }
 
         .interests {
-            font-size: 0.88em;
+            font-size: 0.9em;
             color: var(--muted);
             margin: 0 0 16px;
             line-height: 1.9;
@@ -148,31 +145,31 @@
 
         .bio p {
             margin: 0 0 12px;
-            font-size: 0.96em;
+            font-size: 1em;
             color: var(--text);
+            max-width: 90%;
         }
 
         .bio p:last-child { margin-bottom: 20px; }
         .bio strong { font-weight: 600; color: var(--text); }
-        .bio em { font-style: italic; color: var(--muted); }
 
         .teaching-note {
-            font-size: 0.88em;
+            font-size: 0.9em;
             background: var(--surface);
             border: 1px solid var(--rule);
             border-left: 4px solid var(--accent);
-            padding: 12px 16px;
+            padding: 18px 22px;
             border-radius: 3px;
-            color: var(--muted);
+            color: var(--text);
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            max-width: 95%;
         }
 
-        /* ── SOCIAL LINKS ── */
         .social-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px;
         }
 
         .social-links a {
@@ -181,7 +178,7 @@
             color: var(--text);
             text-decoration: none;
             border: 1px solid var(--rule);
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 3px;
             letter-spacing: 0.04em;
             transition: all 0.2s;
@@ -195,7 +192,6 @@
             border-color: var(--accent);
         }
 
-        /* ── SECTION HEADINGS ── */
         h2 {
             font-family: 'IBM Plex Mono', monospace;
             font-size: 0.85em;
@@ -208,7 +204,6 @@
             font-weight: 600;
         }
 
-        /* ── NEWS & PUBLICATIONS ── */
         .news-list, .pub-list, .project-list {
             list-style: none;
             padding: 0;
@@ -217,11 +212,11 @@
 
         .news-list li {
             display: grid;
-            grid-template-columns: 90px 1fr;
+            grid-template-columns: 100px 1fr;
             gap: 16px;
             padding: 12px 0;
             border-bottom: 1px solid var(--rule);
-            font-size: 0.93em;
+            font-size: 0.95em;
             align-items: baseline;
         }
 
@@ -241,12 +236,12 @@
         .pub-title {
             font-family: 'IBM Plex Serif', serif;
             font-weight: 600;
-            font-size: 1.05em;
+            font-size: 1.1em;
             color: var(--text);
             display: block;
             margin-bottom: 4px;
         }
-        .pub-authors { font-size: 0.88em; color: var(--muted); }
+        .pub-authors { font-size: 0.9em; color: var(--muted); }
         .pub-venue { font-size: 0.85em; font-style: italic; color: var(--muted); }
         
         .pub-links { margin-top: 6px; display: flex; gap: 12px; }
@@ -257,7 +252,6 @@
             text-decoration: none;
             font-weight: 500;
         }
-        .pub-links a:hover { text-decoration: underline; }
 
         .status-badge {
             font-family: 'IBM Plex Mono', monospace;
@@ -268,14 +262,23 @@
             vertical-align: middle;
             font-weight: 500;
         }
-
         .status-review { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
         .status-poster { background: var(--accent-light); color: var(--accent); border: 1px solid #bfdbfe; }
+        .status-prep { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; }
+        .status-funded { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
 
-        /* ── PROJECTS ── */
         .project-list li {
-            padding: 20px 0;
+            padding: 24px 0;
             border-bottom: 1px solid var(--rule);
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .project-info {
+            flex: 1;
+            min-width: 0;
         }
 
         .project-header {
@@ -283,12 +286,12 @@
             align-items: baseline;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .project-title {
             font-weight: 600;
-            font-size: 1.05em;
+            font-size: 1.1em;
             color: var(--text);
         }
 
@@ -300,7 +303,6 @@
             text-decoration: none;
             margin-right: 8px;
         }
-        .project-links a:hover { text-decoration: underline; }
 
         .tag {
             font-family: 'IBM Plex Mono', monospace;
@@ -314,13 +316,22 @@
         }
 
         .project-desc {
-            font-size: 0.92em;
+            font-size: 0.95em;
             color: var(--muted);
             margin-top: 8px;
             line-height: 1.6;
         }
 
-        /* ── FOOTER & COUNTER ── */
+        .project-visual {
+            width: 320px; 
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--rule);
+            flex-shrink: 0;
+            display: block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
         .footer {
             margin-top: 72px;
             padding-top: 24px;
@@ -342,16 +353,17 @@
             transition: filter 0.3s ease;
         }
         
-        .visitor-counter img:hover {
-            filter: grayscale(0%);
-        }
+        .visitor-counter img:hover { filter: grayscale(0%); }
 
-        /* ── LINKS ── */
         a { color: var(--link); text-decoration: none; }
         a:hover { text-decoration: underline; color: var(--link-hover); }
 
-        /* ── MOBILE ── */
+        @media (max-width: 800px) {
+            .project-list li { flex-direction: column; gap: 20px; }
+            .project-visual { width: 100%; max-width: 480px; }
+        }
         @media (max-width: 640px) {
+            .container { padding: 32px 20px 60px; }
             .header { grid-template-columns: 1fr; gap: 24px; }
             .profile-photo { width: 120px; height: 120px; order: -1; }
             .news-list li { grid-template-columns: 1fr; gap: 4px; }
@@ -371,51 +383,55 @@
                 <span class="pe-badge">P.E.</span>
             </div>
 
-            <p class="tagline">Robotics &amp; AI | Embodied AI Researcher</p>
+            <p class="tagline">Embodied AI & Robotics Researcher</p>
 
             <p class="affil">
+                <strong>Licensed Professional Engineer (P.E.)</strong> · 15 Years Industrial R&D<br>
                 PhD Candidate · Robotics & AI Engineering, SMME <strong>NUST</strong><br>
-                Visiting Faculty · Dept. of Mechatronics Engineering, College of EME, <strong>NUST</strong>
+                Instructional Faculty & Principal Investigator (Funded R&D) · Dept. of Mechatronics, <strong>NUST</strong>
             </p>
 
             <div class="roles">
-                <span class="role-pill">Deep Learning</span>
-                <span class="role-pill">RL-training</span>
-                <span class="role-pill">Embodied AI</span>
+                <span class="role-pill">Sim-to-Real RL</span>
+                <span class="role-pill">Legged Locomotion</span>
+                <span class="role-pill">Edge Perception</span>
             </div>
 
             <p class="interests">
                 <strong>Focus:</strong>
-                Sim-to-Real Transfer
-                <span class="dot">•</span>
                 Reinforcement Learning
                 <span class="dot">•</span>
-                Industrial Legged Robots
+                Quadrupeds & Humanoids
                 <span class="dot">•</span>
-                Scientific ML & Gen Design
+                Physical Hardware Validation
                 <span class="dot">•</span>
-                Edge AI & Robotic Perception
+                Neuro-Symbolic CAD
             </p>
 
             <div class="bio">
                 <p>
-                    I build AI that respects physics — and increasingly, AI that has to act in it. My current work is heavily focused on <strong>legged robot locomotion and simulation</strong>. This includes architecting sim-to-real pipelines for quadrupeds, with special emphasis on physics simulation and end-to-end RL-training. 
+                    I build AI that respects physical laws—and acts within them. My current work focuses on <strong>legged robot locomotion and simulation</strong> (architecting sim-to-real reinforcement learning pipelines for quadrupeds and humanoids) and developing hybrid Vision Transformers (ViT) for resource-constrained edge perception.
                 </p>
                 <p>
-                    I leverage a 15-year background in mechanical system dynamics and physical validation to bridge the gap between theoretical deep learning models and the harsh constraints of deployed hardware. 
+                    I leverage a 15-year engineering background in mechanical system dynamics and physical prototyping to bridge the gap between theoretical deep learning models and the harsh physical constraints of deployed hardware. 
                 </p>
             </div>
 
             <div class="teaching-note">
-                ⚙️ I actively instruct Mechatronics cohorts in programming (C++/ python), Robotics and AI. Supervising FYP projects in Robotics. Actively doing R&D in domain.
+                <strong>⚙️ Instructional & Research Leadership:</strong>
+                <ul style="margin-top: 8px; margin-bottom: 0; padding-left: 20px;">
+                    <li><strong>Principal Investigator:</strong> Secured funding and directing an engineering team to test and deploy custom RL "AI Brains" onto physical prototype and industrial quadrupeds.</li>
+                    <li><strong>International Co-Supervision:</strong> Co-supervising a Master's thesis on <em>Deep Learning Surrogate Models for FEA</em> alongside Prof. Matthias Krauledat (Rhine-Waal University, Germany).</li>
+                    <li><strong>Instructional Faculty:</strong> Instructing advanced control architectures and supervising Undergraduate Final Year Projects (FYP) in applied robotics.</li>
+                </ul>
             </div>
 
             <div class="social-links">
                 <a href="mailto:a.sohail@ceme.nust.edu.pk">Email</a>
-                <a href="https://github.com/atifabid " target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/atifsohail " target="_blank">LinkedIn</a>
+                <a href="https://github.com/atifabid" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/atifsohail" target="_blank">LinkedIn</a>
                 <a href="https://scholar.google.com/citations?user=OqfRPNgAAAAJ&hl=en" target="_blank">Scholar</a>
-                <a href="#">CV</a>
+                <a href="resume.pdf" target="_blank">CV</a>
             </div>
         </div>
 
@@ -424,23 +440,23 @@
 
     <!-- NEWS -->
     <section>
-        <h2>News</h2>
+        <h2>News & Milestones</h2>
         <ul class="news-list">
             <li>
-                <span class="news-date">2026</span>
-                <span>Ongoing: <em>Spot-Sumo</em> — sim-to-real quadruped locomotion project (based on SpotMicro design), combining corrected IK, Bezier gait control, and RL-training.</span>
+                <span class="news-date">Sept 2026</span>
+                <span><strong>Funding Secured:</strong> Established a dedicated engineering team to test and deploy custom RL "AI Brains" directly onto physical prototype and industrial quadrupeds.</span>
             </li>
             <li>
                 <span class="news-date">Dec 2025</span>
-                <span>Started as <a href="https://ceme.nust.edu.pk/faculty/a-b-3/" target="_blank">Research Visiting Faculty</a>, Dept. of Mechatronics Engineering, College of EME, NUST.</span>
-            </li>
-            <li>
-                <span class="news-date">Dec 2025</span>
-                <span>Presented poster on <em>AI and IoT in Precision Agriculture</em> at IEEE ICODT2 (SINES, NUST).</span>
+                <span>Started as Instructional Faculty, Dept. of Mechatronics Engineering, NUST.</span>
             </li>
             <li>
                 <span class="news-date">Jan 2025</span>
-                <span>Started PhD in Robotics &amp; AI at <a href="https://smme.nust.edu.pk/" target="_blank">NUST</a></span>
+                <span>Started PhD in Robotics &amp; AI at <a href="https://smme.nust.edu.pk/" target="_blank">NUST</a>.</span>
+            </li>
+            <li>
+                <span class="news-date">2016–2025</span>
+                <span>Senior R&D Engineer & Project Lead: Directed mechanical R&D, topology optimization, and physical prototyping for custom vehicle platforms.</span>
             </li>
         </ul>
     </section>
@@ -449,6 +465,14 @@
     <section>
         <h2>Publications &amp; Preprints</h2>
         <ul class="pub-list">
+            <li>
+                <span class="pub-title">
+                    End to end RL training pipeline for an Open source Robo Dog
+                    <span class="status-badge status-prep">Technical Report In Prep</span>
+                </span>
+                <div class="pub-authors"><strong>Atif Abid</strong>, et al.</div>
+                <div class="pub-venue">Technical report under preparation, 2026 </div>
+            </li>
             <li>
                 <span class="pub-title">
                     Low Cost Edge-Based Person Detection for IoT Surveillance Systems
@@ -477,89 +501,93 @@
         <ul class="project-list">
             
             <li>
-                <div class="project-header">
-                    <span class="project-title">Spot-Sumo — Sim-to-Real Quadruped Locomotion</span>
-                    <span class="project-links">
-                        <a href="https://github.com/atifabid/Spot-Sumo-RL">[Repo]</a>
-                    </span>
-                    <span class="tag">ROS2</span>
-                    <span class="tag">Sim-to-Real</span>
-                    <span class="tag">RL</span>
+                <div class="project-info">
+                    <div class="project-header">
+                        <span class="project-title">Sim-to-Real RL Hardware Deployment</span>
+                        <span class="status-badge status-funded">Funded PI</span>
+                        <div style="width: 100%; margin-top: 4px;"></div>
+                        <span class="project-links">
+                            <a href="https://github.com/atifabid/Spot-Sumo-RL" target="_blank">[Repo]</a>
+                            <a href="YOUR_LINKEDIN_VIDEO_LINK_HERE" target="_blank">[Video Demo]</a>
+                        </span>
+                        <span class="tag">ROS 2</span>
+                        <span class="tag">Sim-to-Real</span>
+                        <span class="tag">RL Brain</span>
+                    </div>
+                    <div class="project-desc">
+                        Directing a hired engineering team to test and deploy custom RL control policies ("AI Brains") directly onto physical prototype and industrial quadrupeds. Integrating ROS 2 and Gazebo to simulate interactions, followed by real-world hardware trials to mitigate actuator latency and test terrain friction compliance.
+                    </div>
                 </div>
-                <div class="project-desc">
-                    Architecting a complete sim-to-real reinforcement learning pipeline for a custom Spot-Sumo quadruped. Integrating ROS2 and Gazebo to simulate complex environment interactions and optimize dynamic gait stability for physical hardware deployment.
-                </div>
+                <img src="spot-sumo.gif" class="project-visual" alt="Quadruped Hardware Demo" onerror="this.style.display='none'">
             </li>
 
             <li>
-                <div class="project-header">
-                    <span class="project-title">Lite3 (Deep Robotics) — MuJoCo Implementation</span>
-                    <span class="project-links">
-                        <a href="#">[Notes/Demo]</a>
-                    </span>
-                    <span class="tag">MuJoCo</span>
-                    <span class="tag">Quadruped Autonomy</span>
+                <div class="project-info">
+                    <div class="project-header">
+                        <span class="project-title">Unitree G1 Humanoid — Multi-Agent "Thriller" Simulation</span>
+                        <span class="project-links">
+                            <a href="https://github.com/atifabid/Unitree-G1-Humanoid-MuJoCo-Sim" target="_blank">[Repo]</a>
+                            <a href="YOUR_LINKEDIN_VIDEO_LINK_HERE" target="_blank">[Video Demo]</a>
+                        </span>
+                        <span class="tag">Kinematics</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">MuJoCo</span>
+                    </div>
+                    <div class="project-desc">
+                        Engineered a local MuJoCo pipeline interfacing with complex humanoid kinematics and pre-trained LSTM policies. Scaled the architecture to batched multi-agent inference, deploying 3 independent G1 humanoids to perform a synchronized dance routine, validating simulation scaling.
+                    </div>
                 </div>
-                <div class="project-desc">
-                    Developed a MuJoCo-based simulation environment for the Deep Robotics Lite3 quadruped, addressing a missing architecture gap in official repositories. Tuned physics and contact parameters to ensure accurate sim-to-sim validation for locomotion control policies.
-                </div>
+                <img src="unitree-g1.gif" class="project-visual" alt="Unitree G1 Simulation Demo" onerror="this.style.display='none'">
             </li>
 
             <li>
-                <div class="project-header">
-                    <span class="project-title">Unitree G1 Humanoid — Multi-Agent "Thriller" Simulation</span>
-                    <span class="project-links">
-                        <a href="#">[Repo]</a>
-                    </span>
-                    <span class="tag">Kinematics</span>
-                    <span class="tag">LSTM</span>
-                    <span class="tag">MuJoCo</span>
+                <div class="project-info">
+                    <div class="project-header">
+                        <span class="project-title">Lite3 (Deep Robotics) — MuJoCo Implementation</span>
+                        <span class="project-links">
+                            <a href="https://github.com/atifabid/lite3-rl-locomotion-mujoco" target="_blank">[Repo]</a>
+                        </span>
+                        <span class="tag">MuJoCo</span>
+                        <span class="tag">Quadruped Autonomy</span>
+                    </div>
+                    <div class="project-desc">
+                        Developed a MuJoCo-based simulation environment for the Deep Robotics Lite3 quadruped, addressing a missing architecture gap in official repositories. Tuned physics and contact parameters to ensure accurate sim-to-sim validation for locomotion control policies.
+                    </div>
                 </div>
-                <div class="project-desc">
-                    Engineered a local MuJoCo pipeline interfacing with complex humanoid kinematics and pre-trained LSTM policies. Scaled the architecture to batched multi-agent inference, deploying 3 independent G1 humanoids to perform a synchronized dance routine, validating simulation scaling.
-                </div>
+                <img src="lite3.gif" class="project-visual" alt="Lite3 MuJoCo Simulation" onerror="this.style.display='none'">
             </li>
 
             <li>
-                <div class="project-header">
-                    <span class="project-title">Prompt2CAD — Neuro-Symbolic Generative Design</span>
-                    <span class="project-links">
-                        <a href="https://github.com/atifabid/Prompt2CAD-LLM-builds-in-solidworks">[Repo]</a>
-                    </span>
-                    <span class="tag">LLM</span>
-                    <span class="tag">Generative CAD</span>
+                <div class="project-info">
+                    <div class="project-header">
+                        <span class="project-title">Edge AI Safety Node — Perception &amp; Diagnostics</span>
+                        <span class="project-links">
+                            <a href="https://github.com/atifabid/suq3framework-RNN-model-compression" target="_blank">[Repo]</a>
+                        </span>
+                        <span class="tag">ESP32</span>
+                        <span class="tag">YOLO</span>
+                        <span class="tag">Edge Inference</span>
+                    </div>
+                    <div class="project-desc">
+                        Architected a low-latency safety perception node (virtual bumper) on constrained ESP32 hardware. Engineered a 3-stage compression pipeline (SUQ-3) to deploy YOLO-based computer vision diagnostics directly onto edge silicon.
+                    </div>
                 </div>
-                <div class="project-desc">
-                    Text-to-CAD pipeline that translates natural language into executable SolidWorks geometric feature trees, guaranteeing 100% geometric validity. Bridges LLM reasoning with strict physical and manufacturing constraints.
-                </div>
+                <img src="edge-ai.gif" class="project-visual" alt="Edge AI Detection Demo" onerror="this.style.display='none'">
             </li>
 
             <li>
-                <div class="project-header">
-                    <span class="project-title">Edge AI Safety Node — Perception &amp; Diagnostics</span>
-                    <span class="project-links">
-                        <a href="#">[Demo]</a>
-                    </span>
-                    <span class="tag">ESP32</span>
-                    <span class="tag">YOLO</span>
-                    <span class="tag">SUQ-3</span>
-                </div>
-                <div class="project-desc">
-                    Architected a low-latency safety perception node (virtual bumper) on constrained ESP32 hardware. Engineered a 3-stage compression pipeline (SUQ-3) to deploy YOLO-based computer vision diagnostics directly onto edge silicon.
-                </div>
-            </li>
-
-            <li>
-                <div class="project-header">
-                    <span class="project-title">Local LLM Inference Benchmarks</span>
-                    <span class="project-links">
-                        <a href="https://github.com/A B /Local-LLMs-Benchmarks">[Code]</a>
-                    </span>
-                    <span class="tag">Benchmarking</span>
-                    <span class="tag">Hardware Opt.</span>
-                </div>
-                <div class="project-desc">
-                    Rigorous benchmarking of local inference frameworks (vLLM, Ollama, TensorRT-LLM) for models like Llama 3 and Qwen on consumer GPU architectures, identifying optimal deployment setups for localized robotic reasoning layers.
+                <div class="project-info">
+                    <div class="project-header">
+                        <span class="project-title">Prompt2CAD — Neuro-Symbolic Generative Design</span>
+                        <span class="project-links">
+                            <a href="https://github.com/atifabid/Prompt2CAD-LLM-builds-in-solidworks" target="_blank">[Repo]</a>
+                        </span>
+                        <span class="tag">LLM</span>
+                        <span class="tag">Generative CAD</span>
+                    </div>
+                    <div class="project-desc">
+                        Text-to-CAD pipeline that translates natural language into executable SolidWorks geometric feature trees, guaranteeing 100% geometric validity. Bridges LLM reasoning with strict physical and manufacturing constraints.
+                    </div>
                 </div>
             </li>
 
@@ -569,12 +597,11 @@
     <div class="footer">
         <span>&copy; 2026 Atif Abid</span>
         
-        <!-- VISITOR COUNTER BADGE -->
-        <a class="visitor-counter" href="https://github.com/A B " target="_blank" title="Page Visitors">
+        <a class="visitor-counter" href="https://github.com/atifabid" target="_blank" title="Page Visitors">
             <img src="https://visitor-badge.laobi.icu/badge?page_id=abc.github.io.portfolio" alt="Visitor Count"/>
         </a>
 
-        <span>Last updated: Sept 2026</span>
+        <span>Last updated: Oct 2026</span>
     </div>
 
 </div>
